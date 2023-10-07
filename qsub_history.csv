@@ -1,0 +1,14 @@
+﻿batch_script,std_out,train_accuracy,val_accuracy,train_cmd
+,std_out_decoder_1,0.941,0.842,
+bs_1,std_out_1,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=2 loader.eval_resolutions=1 tc.conv.segment_length=200 tc.conv.stride=100 tc.transformer.trans_dim=50 tc.transformer.num_layers=4 tc.transformer.num_heads=10
+bs_2,std_out_2,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=2 loader.eval_resolutions=1 tc.conv.stride=20
+bs_3,std_out_3,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=2 loader.eval_resolutions=1 tc.transformer.trans_dim=20 tc.transformer.ff_dim=100 tc.transformer.num_layers=10 tc.transformer.num_heads=5
+bs_4,std_out_4,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=2 model.d_model=512 loader.eval_resolutions=1 tc.transformer.trans_dim=20 tc.transformer.ff_dim=100 tc.transformer.num_layers=10 tc.transformer.num_heads=5
+bs_5,std_out_5,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=4 loader.eval_resolutions=1 tc.transformer.trans_dim=20 tc.transformer.ff_dim=100 tc.transformer.num_layers=10 tc.transformer.num_heads=5
+bs_6,std_out_6,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=2 loader.eval_resolutions=1 tc.conv.segment_length=500 tc.conv.stride=50
+bs_7,std_out_7,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=2 loader.eval_resolutions=1 model.bidirectional=true
+bs_8,std_out_8,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=2 loader.eval_resolutions=1 tc.conv.stride=20 model.bidirectional=true
+bs_9,std_out_9,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=6 model.d_model=512 loader.eval_resolutions=1
+bs_10,std_out_10,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=2 loader.eval_resolutions=1 tc.conv.segment_length=400 tc.conv.stride=400 tc.transformer.trans_dim=100 tc.transformer.ff_dim=100 tc.transformer.num_heads=20
+bs_11,std_out_11,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=4 model.d_model=128 loader.eval_resolutions=1 tc.conv.segment_length=400 tc.conv.stride=400 tc.transformer.trans_dim=100 tc.transformer.ff_dim=100 tc.transformer.num_heads=20
+bs_12,std_out_12,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=6 model.d_model=128 loader.eval_resolutions=1 tc.conv.segment_length=200 tc.conv.stride=50 tc.transformer.trans_dim=80 tc.transformer.num_layers=10 tc.transformer.num_heads=10
