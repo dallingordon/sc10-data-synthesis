@@ -18,3 +18,5 @@ gk,,bs_8,,,,std_out_8,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 
 ,,bs_15,,,,std_out_15,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=4 loader.batch_size=10 model.d_model=128 loader.eval_resolutions=1 tc.conv.segment_length=400 tc.conv.stride=50,
 ,,bs_16,,,,std_out_16,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=4 loader.batch_size=10 model.d_model=128 loader.eval_resolutions=1 tc.conv.segment_length=400 tc.conv.stride=10,
 ,,bs_17,,,,std_out_17,,,python -m train_hydra pipeline=sc dataset=sc10 model=s4 model.n_layers=4 model.d_model=512 optimizer.lr=0.0002 loader.batch_size=5 loader.eval_resolutions=1 tc.conv.segment_length=500 tc.conv.stride=20 tc.transformer.trans_dim=40 tc.transformer.num_heads=10,
+,,bs_hydra_default_test,,,,,,,This is my test to make sure my hydra defaults run the same as the 84% we got.  ,
+,,bs_init_test,,,,,,,will throw.  First test is to make sure the init as I wrote it works.  Qsubbing since the scc is slow.,
